@@ -3,22 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            font-size: 2em;
-        }
-    </style>
+    <title>Spivak's Calculus - Chapter 2 Explanation</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    Soon
+    <h1>Lecture 5 (Chapter 2)</h1>
+    <p>The 12 properties of numbers that we listed cannot fully describe how all numbers work. The types of numbers are:</p>
+    <ol>
+        <li>
+            <strong>Natural numbers (counting numbers) $\mathbb{N} = \{1, 2, 3, \ldots\}$</strong>. All properties apply except P2, P3, P7.
+            <p>The most basic property of $\mathbb{N}$ is the principle of mathematical induction. We can prove that the property $P$ is applied for all numbers if:</p>
+            <ol>
+                <li>$P(1)$ is true.</li>
+                <li>Whenever $P(k)$ is true, $P(k + 1)$ is true.</li>
+            </ol>
+            <div class="example">
+                <strong>Example:</strong> Prove that the sum of $1 + 2 + \ldots + n = \frac{n(n + 1)}{2}$
+                <pre>
+1 + \cdots + k = \frac{k(k + 1)}{2} \rightarrow 
+1 + \cdots + k + (k + 1) = \frac{k(k + 1)}{2} + (k + 1)
+                         = \frac{k(k + 1) + 2(k + 1)}{2}
+                         = \frac{k^2 + 3k + 2}{2}
+                         = \frac{(k + 1)(k + 2)}{2}
+                </pre>
+            </div>
+            <p>And there's another form of induction called complete induction:</p>
+            <ol>
+                <li>$1$ is in $A$.</li>
+                <li>If $1, \ldots, k$ is in $A$, then $k + 1$ is in $A$.</li>
+            </ol>
+            <p>A closely related topic to mathematical induction is recursive definitions. For example, the number $n!$ is defined as:</p>
+            <ol>
+                <li>$1! = 1$</li>
+                <li>$n! = n \cdot (n - 1)!$</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Whole numbers $\mathbb{W}$ (includes $0$)</strong>. All properties apply except P3, P7.
+        </li>
+        <li>
+            <strong>Integers $\mathbb{Z}$ (includes negative numbers)</strong>. All properties apply except P7.
+        </li>
+        <li>
+            <strong>Rational numbers $\mathbb{Q}$ (can be expressed as fractions)</strong>. All properties apply.
+        </li>
+        <li>
+            <strong>Irrational numbers (cannot be expressed as fractions, e.g., $\pi$, $e$, $\sqrt{2}$)</strong>. All properties apply.
+            <div class="proof">
+                <strong>Proof:</strong> That $\sqrt{2}$ is irrational (suppose $\sqrt{2} = \frac{p}{q}$)
+                <pre>
+\frac{p^2}{q^2} = 2 \rightarrow p^2 = 2q^2
+(Assume $p$ is even, let $p = 2k$)
+4k^2 = 2q^2 \rightarrow 2k^2 = q^2
+(This implies $q$ is even)
+                </pre>
+                <p>So, $\frac{p}{q}$ is not in simplest form, contradicting our assumption.</p>
+            </div>
+            <p>But we can't get the value of any irrational number or prove their existence using our ordinary number properties.</p>
+            <p>How could we?</p>
+        </li>
+    </ol>
 </body>
 </html>

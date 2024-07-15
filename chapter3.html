@@ -3,22 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            font-size: 2em;
-        }
-    </style>
+    <title>Spivak's Calculus - Chapter 2 Explanation</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    Soon
+
+    <div class="section">
+        <h2>Lecture 6 (Chapter 3)</h2>
+        <p>Here we will start to study functions. In the words of Michael Spiral:</p>
+        <div class="quote">
+            <p>Undoubtedly, the most important concept in all of mathematics is that of a function - in almost every branch of modern mathematics, functions turn out to be the central object of investigation.</p>
+        </div>
+        <p>A function is an association of a value to every value in the function's "domain".</p>
+    </div>
+
+    <div class="section">
+        <h2>Lecture 7</h2>
+        <p>Here we will look at examples of functions to get a deeper understanding of how functions work.</p>
+        <div class="example">
+            <p><strong>Example:</strong> A function that assigns each human (H) to its mother (M)</p>
+            <div class="figure">
+                <!-- Placeholder for figure -->
+                <img src="function_mother.png" alt="Function assigning each human to their mother">
+                <p>Function assigning each human to their mother</p>
+            </div>
+            <p>We know from this example that functions assign one output for every defined input.</p>
+            <p>Inputs can't have more than one output, but outputs can have more than one input.</p>
+        </div>
+        <div class="example">
+            <p><strong>Example:</strong> A function that outputs the age for every human.</p>
+            <p><code>p(p) = { age if p is male; age/2 if p is female }</code></p>
+            <p>We know from this example that functions can have more than one condition.</p>
+            <p>Real numbers can't sufficiently deal with infinities. Functions solve this problem.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Lecture 8</h2>
+        <p>We represent the function mathematically like:</p>
+        <div class="figure">
+            <p><code>"name of the function": "domain" → "codomain"</code></p>
+            <p><code>"argument" → "value" (rule)</code></p>
+        </div>
+        <div class="example">
+            <p><strong>Example:</strong> A function with the name <code>f</code> and domain <code>ℕ</code> and the rule that relates the argument <code>x</code> to the value <code>y = 4 - x</code> has the notation:</p>
+            <p><code>f: ℕ → 4 - x</code></p>
+            <p>A function with an undefined domain and codomain is incomplete.</p>
+        </div>
+        <p>Another famous notation of functions is <code>f(x)</code> which is read as:</p>
+        <p>The value of function at argument <code>x</code>.</p>
+        <div class="note">
+            <p><strong>Note:</strong> If the domain is not specified, you assume it's all of the real numbers, as long as the output is defined.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Lecture 9</h2>
+        <div class="example">
+            <p><strong>Example:</strong> <code>f(x) = 8 + 3.6 · 9.7 · x</code></p>
+            <div class="figure">
+                <p><code>
+                    f(0) = 8 &nbsp;&nbsp; f(10) = 357.2 &nbsp;&nbsp; f(20) = 706.4 <br>
+                    f(30) = 1055.6 &nbsp;&nbsp; f(40) = 1404.8 &nbsp;&nbsp; f(120) = 4198.4
+                </code></p>
+            </div>
+            <p>This function represents motion under constant acceleration, specifically Free Fall.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Lecture 10</h2>
+        <p>Combining functions can be done in multiple ways. For example, assume</p>
+        <div class="figure">
+            <p><code>x → f → f(x) = x²</code></p>
+            <p><code>x → g → g(x) = 6/(x-2) - 1</code></p>
+        </div>
+        <p>We can combine these two functions like</p>
+        <div class="figure">
+            <p><code>x → (f+g) → (f+g)(x) = f(x) + g(x)</code></p>
+            <p><code>x → (f-g) → (f-g)(x) = f(x) - g(x)</code></p>
+            <p><code>x → (f·g) → (f·g)(x) = f(x) · g(x)</code></p>
+            <p><code>x → (f/g) → (f/g)(x) = f(x) / g(x)</code></p>
+        </div>
+        <div class="note">
+            <p><strong>Note:</strong> The domain of each combined function is the domain of <code>f ∩</code> the domain of <code>g</code>.</p>
+            <p>And the division function has an additional condition such that:</p>
+            <p><code>{x: g(x) ≠ 0}</code></p>
+        </div>
+        <p>We can also combine functions into composite functions:</p>
+        <div class="figure">
+            <p><code>x → (f∘g) → (f∘g)(x) = f(g(x))</code></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Lecture 11</h2>
+        <p>In the same way, we combined functions, we can decompose them in terms of simpler functions.</p>
+        <p>The simplest function is the identity function:</p>
+        <div class="figure">
+            <p><code>x → I → I(x) = x</code></p>
+        </div>
+        <div class="example">
+            <p><strong>Example:</strong> Decompose this function <code>f(x) = (x + x² + sin(x) - sin²(x)) / (3x + x·sin(x) + sin(x²))</code>:</p>
+            <p><code>f = (I + I·I + sin - sin·sin) / (I + I + I + I·sin + sin·(I·I))</code></p>
+        </div>
+        <p>Here we represented functions in terms of functions, not in terms of its outputs, making this notation mathematically more accurate.</p>
+        <p>Another way to represent the function notation is:</p>
+        <div class="figure">
+            <p><code>f: ℝ → ℝ</code></p>
+            <p><code>x → (x + x² + sin(x) - sin²(x)) / (3x + x·sin(x) + sin(x²))</code></p>
+        </div>
+        <p>This shows that there are three ways to represent a function:</p>
+        <ol>
+            <li>As a least accurate representation of the value.</li>
+            <li>As the most accurate representation in the language of functions.</li>
+            <li>As an intermediate notation.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Lecture 12</h2>
+        <p>Our first definition of functions was:</p>
+        <div class="quote">
+            <p>"A function is a rule which assigns, to each of certain real numbers, some other real number."</p>
+        </div>
+        <p>This definition is ambiguous because in this definition if the rule is different, even if the result is the same, the function is different, which is wrong.</p>
+        <p>The key to finding the definition is to know that a function is a process of pairing two numbers.</p>
+        <p>So we can define functions to be:</p>
+        <div class="quote">
+            <p>"A function is a collection of pairs of numbers with the following property: if (a, b) and (a, c) are both in the collection, then b = c; in other words, the collection must not contain two different pairs with the same first element."</p>
+        </div>
+        <p>Another definition is:</p>
+        <div class="quote">
+            <p>"If f is a function, the domain of f is the set of all a for which there's some b such that (a, b) is in it. If a is in the domain of f, it follows from the definition of a function that there's, in fact, a unique number b such that (a, b) is in f. This unique b is denoted by f(a)."</p>
+        </div>
+        <p>These are the official definitions of functions.</p>
+        <p>But nothing can hold you from thinking about functions with the old definition. However, you won't be able to know what a function really is without graphing it.</p>
+    </div>
+
 </body>
 </html>
