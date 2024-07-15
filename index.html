@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spivak's Calculus - Chapter 1 Explanation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Spivak's Calculus - Chapter 1 Explanation</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Lecture I (Chapter 1)</h2>
+            <p><em>16/08/2023</em></p>
+            <p>Properties of numbers that all operations must obey:</p>
+            <ul>
+                <li>(P1) If \(a\), \(b\), and \(c\) are any numbers, then (associative property):
+                    <div class="equation">\(a + (b + c) = (a + b) + c\)</div>
+                </li>
+                <li>(P2) If \(a\) is any number, then (additive identity):
+                    <div class="equation">\(a + 0 = 0 + a = a\)</div>
+                </li>
+                <li>(P3) For every number \(a\), there is a number \(-a\) such that (additive inverse):
+                    <div class="equation">\(a + (-a) = -a + a = 0\)</div>
+                </li>
+                <li>Example: Proof: \(a + x = a\) when \(x = 0\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            \text{(P1)}\; -a + a + x &= a + (-a) \\
+                            \text{(P1)}\; (-a + a) + x &= 0 \\
+                            0 + x &= 0 \\
+                            \text{(P2)}\; 0 + x &= 0, \quad x = 0
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+                <li>(P4) If \(a\) and \(b\) are any numbers, then (commutative property):
+                    <div class="equation">\(a + b = b + a\)</div>
+                </li>
+                <li>(P5) If \(a\), \(b\), and \(c\) are any numbers, then (associative property):
+                    <div class="equation">\(a \cdot (b \cdot c) = (a \cdot b) \cdot c\)</div>
+                </li>
+                <li>(P6) If \(a\) is any number, then (multiplicative identity):
+                    <div class="equation">\(a \cdot 1 = 1 \cdot a = a\)</div>
+                </li>
+                <li>(P7) For every number \(a \neq 0\), there is a number \(a^{-1}\) such that (multiplicative inverse):
+                    <div class="equation">\(a \cdot a^{-1} = a^{-1} \cdot a = 1\)</div>
+                </li>
+                <li>Example: If \(a \cdot b = a \cdot c\), prove that \(b = c \quad (a \neq 0)\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            \text{(P7)}\; a^{-1} \cdot (a \cdot b) &= a^{-1} \cdot (a \cdot c) \\
+                            \text{(P5)}\; (a^{-1} \cdot a) \cdot b &= (a^{-1} \cdot a) \cdot c \\
+                            1 \cdot b &= 1 \cdot c \\
+                            \text{(P6)}\; b &= c
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+                <li>Example: If \(a \cdot b = 0\), prove that \(a = 0\) or \(b = 0\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            & \text{Assume } a \neq 0 \\
+                            & \text{Proof: } a^{-1} \cdot (a \cdot b) = 0 \cdot a^{-1} \text{ will be proved next } \\
+                            & \text{Hence, } a^{-1} \cdot a \cdot b = 0 \\
+                            & 1 \cdot b = 0 \\
+                            & b = 0
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+                <li>(P8) If \(a\) and \(b\) are any numbers, then (commutative property):
+                    <div class="equation">\(a \cdot b = b \cdot a\)</div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Lecture 2</h2>
+            <ul>
+                <li>(P9) If \(a\), \(b\), and \(c\) are any numbers, then (distributive law):
+                    <div class="equation">\(a \cdot (b + c) = a \cdot b + a \cdot c\)</div>
+                </li>
+                <li>Example: Prove: if \(a - b = -a\) when \(a = b\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            a - b + b &= b - a + b \\
+                            a &= b + b - a \\
+                            a + a &= b + b - a + a \\
+                            a \cdot 1 + a \cdot 1 &= b \cdot 1 + b \cdot 1 \\
+                            a \cdot (1 + 1) &= b \cdot (1 + 1) \\
+                            a \cdot 2 \cdot 2^{-1} &= b \cdot 2 \cdot 2^{-1} \\
+                            a \cdot 1 &= b \cdot 1 \\
+                            a &= b
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+                <li>Example: Prove \(a \cdot 0 = 0\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            & a \cdot 0 + a \cdot 0 = a \cdot (0 + 0) \\
+                            & a \cdot 0 + a \cdot 0 = a \cdot 0 \\
+                            & a \cdot 0 + a \cdot 0 - a \cdot 0 = a \cdot 0 - a \cdot 0 \\
+                            & a \cdot 0 = 0
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+                <li>Example: Prove \((-a) \cdot b = -(a \cdot b)\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            & (-a) \cdot b + a \cdot b = b \cdot ((-a) + a) \\
+                            & = 0 \cdot b \\
+                            & = 0 \\
+                            & (-a) \cdot b + a \cdot b - a \cdot b = 0 - (a \cdot b) \\
+                            & (-a) \cdot b = -(a \cdot b)
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+                <li>Example: Prove \((-a) \cdot (-b) = (a \cdot b)\)
+                    <div class="equation">
+                        \[
+                        \begin{aligned}
+                            & (-a) \cdot (-b) + (-(a \cdot b)) = 0 \\
+                            & -(a \cdot b) = (-(-a) \cdot b) = (-a) \cdot (-b) + (-a) \cdot b \\
+                            & = (-a) \cdot ((-b) + b) \\
+                            & = (-a) \cdot 0 \\
+                            & = 0 \\
+                            & (-a) \cdot (-b) + (-(a \cdot b) + a \cdot b = 0 + (a \cdot b)) \\
+                            & (-a) \cdot (-b) = a \cdot b
+                        \end{aligned}
+                        \]
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Lecture 3 (14/09/2023)</h2>
+            <p>Example: Proof: \(a^{-1} = b^{-1}\)
+                <div class="equation">
+                    \[
+                    \begin{aligned}
+                        & \text{Proof: } a^{-1} = b^{-1} \cdot (a \cdot a^{-1}) \\
+                        & = (b^{-1} \cdot a) \cdot a^{-1} \\
+                        & = b^{-1} \cdot (a \cdot a^{-1}) \\
+                        & = b^{-1} \cdot 1 = b^{-1}
+                    \end{aligned}
+                    \]
+                </div>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Spivak's Calculus</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
