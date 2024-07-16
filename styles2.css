@@ -130,15 +130,68 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    animation: glitter 1s infinite;
 }
 
 .congrats-message {
     font-size: 3rem;
     color: #ffeb3b;
-    animation: glitter 1s infinite;
+    margin-bottom: 1rem;
+}
+
+.balloons {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.balloon {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 80px;
+    background-color: #ff6f61;
+    border-radius: 50% 50% 50% 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon:nth-child(1) {
+    left: 20%;
+    background-color: #ff6f61;
+}
+
+.balloon:nth-child(2) {
+    left: 40%;
+    background-color: #ff8a65;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    left: 60%;
+    background-color: #ffca28;
+    animation-delay: 4s;
+}
+
+.balloon:nth-child(4) {
+    left: 80%;
+    background-color: #9ccc65;
+    animation-delay: 6s;
+}
+
+.balloon:nth-child(5) {
+    left: 50%;
+    background-color: #26c6da;
+    animation-delay: 8s;
 }
 
 @keyframes glitter {
     0%, 100% { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b; }
     50% { text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b, 0 0 70px #ffeb3b; }
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    50% { transform: translateY(-10vh); }
+    100% { transform: translateY(100vh); }
 }

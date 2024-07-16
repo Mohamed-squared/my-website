@@ -231,13 +231,20 @@
                     $('body').append(`
                         <div class="congrats-overlay">
                             <div class="congrats-message">CONGRATULATIONS</div>
+                            <div class="balloons">
+                                <div class="balloon"></div>
+                                <div class="balloon"></div>
+                                <div class="balloon"></div>
+                                <div class="balloon"></div>
+                                <div class="balloon"></div>
+                            </div>
                         </div>
                     `);
                     setTimeout(function() {
                         $('.congrats-overlay').fadeOut('slow', function() {
                             $(this).remove();
                         });
-                    }, 3000);
+                    }, 5000);
                 }
             });
         });
