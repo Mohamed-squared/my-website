@@ -4,206 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spivak's Calculus - Chapter 1 Explanation</title>
-    <link rel="stylesheet" href="styles2.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for improved structure */
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2, h3 {
+            margin-top: 30px;
+        }
+        .property {
+            margin-bottom: 10px;
+        }
+        .example {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 3px solid #007bff;
+            border-radius: 5px;
+        }
+        .note {
+            background-color: #ffffcc;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 3px solid #ffc107;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-      
-          <h1>Lecture 1 (Chapter 1)</h1>
-          <p>Properties of numbers that all operations must obey:</p>
-          <ul>
-              <li><strong>(P1)</strong> If <em>a</em>, <em>b</em>, and <em>c</em> are any numbers, then (associative property):
-                  <p><em>a</em> + (<em>b</em> + <em>c</em>) = (<em>a</em> + <em>b</em>) + <em>c</em></p>
-              </li>
-              <li><strong>(P2)</strong> If <em>a</em> is any number, then (additive identity):
-                  <p><em>a</em> + 0 = 0 + <em>a</em> = <em>a</em></p>
-              </li>
-              <li><strong>(P3)</strong> For every number <em>a</em>, there is a number -<em>a</em> such that (additive inverse):
-                  <p><em>a</em> + (-<em>a</em>) = -<em>a</em> + <em>a</em> = 0</p>
-                  <div class="example">
-                      Example: Proof: <em>a</em> + <em>x</em> = <em>a</em> when <em>x</em> = 0
-                      <p>
-                          <em>(P1)</em> -<em>a</em> + <em>a</em> + <em>x</em> = <em>a</em> + (-<em>a</em>)<br>
-                          <em>(P1)</em> (-<em>a</em> + <em>a</em>) + <em>x</em> = 0<br>
-                          0 + <em>x</em> = 0<br>
-                          <em>(P2)</em> 0 + <em>x</em> = 0, <em>x</em> = 0
-                      </p>
-                  </div>
-                  <div class="note">Note: This can be used to solve any equation.</div>
-              </li>
-              <li><strong>(P4)</strong> If <em>a</em> and <em>b</em> are any numbers, then (commutative property):
-                  <p><em>a</em> + <em>b</em> = <em>b</em> + <em>a</em></p>
-              </li>
-          </ul>
-      
-          <p>These are 4 properties for addition:</p>
-      
-          <ul>
-              <li><strong>(P5)</strong> If <em>a</em>, <em>b</em>, and <em>c</em> are any numbers, then (associative property):
-                  <p><em>a</em> &middot; (<em>b</em> &middot; <em>c</em>) = (<em>a</em> &middot; <em>b</em>) &middot; <em>c</em></p>
-              </li>
-              <li><strong>(P6)</strong> If <em>a</em> is any number, then (multiplicative identity):
-                  <p><em>a</em> &middot; 1 = 1 &middot; <em>a</em> = <em>a</em></p>
-              </li>
-              <li><strong>(P7)</strong> For every number <em>a</em> &ne; 0, there is a number <em>a</em><sup>-1</sup> such that (multiplicative inverse):
-                  <p><em>a</em> &middot; <em>a</em><sup>-1</sup> = <em>a</em><sup>-1</sup> &middot; <em>a</em> = 1</p>
-                  <div class="example">
-                      Example: If <em>a</em> &middot; <em>b</em> = <em>a</em> &middot; <em>c</em>, prove that <em>b</em> = <em>c</em> (<em>a</em> &ne; 0)
-                      <p>
-                          <em>(P7)</em> <em>a</em><sup>-1</sup> &middot; (<em>a</em> &middot; <em>b</em>) = <em>a</em><sup>-1</sup> &middot; (<em>a</em> &middot; <em>c</em>)<br>
-                          <em>(P5)</em> (<em>a</em><sup>-1</sup> &middot; <em>a</em>) &middot; <em>b</em> = (<em>a</em><sup>-1</sup> &middot; <em>a</em>) &middot; <em>c</em><br>
-                          1 &middot; <em>b</em> = 1 &middot; <em>c</em><br>
-                          <em>(P6)</em> <em>b</em> = <em>c</em>
-                      </p>
-                  </div>
-                  <div class="example">
-                      Example: If <em>a</em> &middot; <em>b</em> = 0, prove that <em>a</em> = 0 or <em>b</em> = 0
-                      <p>
-                          Assume <em>a</em> &ne; 0<br>
-                          Proof: <em>a</em><sup>-1</sup> &middot; (<em>a</em> &middot; <em>b</em>) = 0 &middot; <em>a</em><sup>-1</sup> will be proved next<br>
-                          Hence, <em>a</em><sup>-1</sup> &middot; <em>a</em> &middot; <em>b</em> = 0<br>
-                          1 &middot; <em>b</em> = 0<br>
-                          <em>b</em> = 0
-                      </p>
-                  </div>
-                  <div class="note">Note: This is used in solving the factorization of quadratic equations.</div>
-              </li>
-              <li><strong>(P8)</strong> If <em>a</em> and <em>b</em> are any numbers, then (commutative property):
-                  <p><em>a</em> &middot; <em>b</em> = <em>b</em> &middot; <em>a</em></p>
-              </li>
-          </ul>
-      
-          <h2>Lecture 2</h2>
-          <ul>
-              <li><strong>(P9)</strong> If <em>a</em>, <em>b</em>, and <em>c</em> are any numbers, then (distributive law):
-                  <p><em>a</em> &middot; (<em>b</em> + <em>c</em>) = <em>a</em> &middot; <em>b</em> + <em>a</em> &middot; <em>c</em></p>
-                  <div class="example">
-                      Example: Prove: if <em>a</em> - <em>b</em> = -<em>a</em> when <em>a</em> = <em>b</em>
-                      <p>
-                          <em>a</em> - <em>b</em> + <em>b</em> = <em>b</em> - <em>a</em> + <em>b</em><br>
-                          <em>a</em> = <em>b</em> + <em>b</em> - <em>a</em><br>
-                          <em>a</em> + <em>a</em> = <em>b</em> + <em>b</em> - <em>a</em> + <em>a</em><br>
-                          <em>a</em> &middot; 1 + <em>a</em> &middot; 1 = <em>b</em> &middot; 1 + <em>b</em> &middot; 1<br>
-                          <em>a</em> &middot; (1 + 1) = <em>b</em> &middot; (1 + 1)<br>
-                          <em>a</em> &middot; 2 &middot; 2<sup>-1</sup> = <em>b</em> &middot; 2 &middot; 2<sup>-1</sup><br>
-                          <em>a</em> &middot; 1 = <em>b</em> &middot; 1<br>
-                          <em>a</em> = <em>b</em>
-                      </p>
-                  </div>
-                  <div class="example">
-                      Example: Prove <em>a</em> &middot; 0 = 0
-                      <p>
-                          <em>a</em> &middot; 0 + <em>a</em> &middot; 0 = <em>a</em> &middot; (0 + 0)<br>
-                          <em>a</em> &middot; 0 + <em>a</em> &middot; 0 = <em>a</em> &middot; 0<br>
-                          <em>a</em> &middot; 0 + <em>a</em> &middot; 0 - <em>a</em> &middot; 0 = <em>a</em> &middot; 0 - <em>a</em> &middot; 0<br>
-                          <em>a</em> &middot; 0 = 0
-                      </p>
-                  </div>
-                  <div class="example">
-                      Example: Prove (-<em>a</em>) &middot; <em>b</em> = -(<em>a</em> &middot; <em>b</em>)
-                      <p>
-                          (-<em>a</em>) &middot; <em>b</em> + <em>a</em> &middot; <em>b</em> = <em>b</em> &middot; ((-<em>a</em>) + <em>a</em>)<br>
-                          = 0 &middot; <em>b</em><br>
-                          = 0<br>
-                          (-<em>a</em>) &middot; <em>b</em> + <em>a</em> &middot; <em>b</em> - <em>a</em> &middot; <em>b</em> = 0 - (<em>a</em> &middot; <em>b</em>)<br>
-                          (-<em>a</em>) &middot; <em>b</em> = -(<em>a</em> &middot; <em>b</em>)
-                      </p>
-                  </div>
-                  <div class="example">
-                      Example: Prove (-<em>a</em>) &middot; (-<em>b</em>) = (<em>a</em> &middot; <em>b</em>)
-                      <p>
-                          (-<em>a</em>) &middot; (-<em>b</em>) + (-(<em>a</em> &middot; <em>b</em>)) = 0<br>
-                          -(<em>a</em> &middot; <em>b</em>) = (-(-<em>a</em>) &middot; <em>b</em>) = (-<em>a</em>) &middot; (-<em>b</em>) + (-<em>a</em>) &middot; <em>b</em><br>
-                          = (-<em>a</em>) &middot; ((-<em>b</em>) + <em>b</em>)<br>
-                          = (-<em>a</em>) &middot; 0<br>
-                          = 0<br>
-                          (-<em>a</em>) &middot; (-<em>b</em>) + (-(<em>a</em> &middot; <em>b</em>) + <em>a</em> &middot; <em>b</em> = 0 + (<em>a</em> &middot; <em>b</em>)<br>
-                          (-<em>a</em>) &middot; (-<em>b</em>) = (<em>a</em> &middot; <em>b</em>)
-                      </p>
-                  </div>
-                  <div class="example">
-                      Example: Prove that (<em>x</em> - 1) &middot; (<em>x</em> - 2) = 0
-                      <p>
-                          <em>x</em><sup>2</sup> - 3<em>x</em> + 2 = 0
-                      </p>
-                      <p>
-                          (<em>x</em> - 1)(<em>x</em> - 2) = <em>x</em>(<em>x</em> - 2) + (-1)(<em>x</em> - 2)<br>
-                          = <em>x</em> &middot; <em>x</em> + (-2) &middot; <em>x</em> + (-1) &middot; <em>x</em> + (-1) &middot; (-2)<br>
-                          = <em>x</em><sup>2</sup> + <em>x</em>(-2 + -1) + 2<br>
-                          = <em>x</em><sup>2</sup> + (-3)<em>x</em> + 2<br>
-                          = <em>x</em><sup>2</sup> - 3<em>x</em> + 2
-                      </p>
-                  </div>
-                  <div class="note">Note: This strategy is used in the multiplication of any numbers.</div>
-              </li>
-          </ul>
-      
-          <h2>Lecture 3</h2>
-          <ul>
-              <li><strong>(P10)</strong> For every number <em>a</em>, only one of the following holds (Trichotomy Law):
-                  <ol>
-                      <li><em>a</em> = 0</li>
-                      <li><em>a</em> is in <em>P</em></li>
-                      <li>-<em>a</em> is in <em>P</em></li>
-                  </ol>
-              </li>
-              <li><strong>(P11)</strong> If <em>a</em> and <em>b</em> are in <em>P</em>, then (closure under addition):
-                  <p><em>a</em> + <em>b</em> is in <em>P</em></p>
-              </li>
-              <li><strong>(P12)</strong> If <em>a</em> and <em>b</em> are in <em>P</em>, then (closure under multiplication):
-                  <p><em>a</em> &middot; <em>b</em> is in <em>P</em></p>
-              </li>
-          </ul>
-      
-          <p>Definition: <em>a</em> &gt; <em>b</em> &harr; <em>a</em> - <em>b</em> &gt; 0</p>
-          <div class="example">
-              Example: If <em>a</em> &lt; <em>b</em> and <em>b</em> &lt; <em>c</em>, prove <em>a</em> &lt; <em>c</em>
-              <p>
-                  <em>b</em> - <em>a</em> &gt; 0<br>
-                  <em>c</em> - <em>b</em> &gt; 0<br>
-                  (<em>b</em> - <em>a</em>) + (<em>c</em> - <em>b</em>) &gt; 0<br>
-                  <em>c</em> - <em>a</em> &gt; 0<br>
-                  <em>c</em> &gt; <em>a</em>
-              </p>
-          </div>
-      
-          <p>Definition: Absolute Value</p>
-          <p>|<em>a</em>| = 
-              <span style="display:inline-block; margin-left: 10px;">
-                  <span style="display:block;"> <em>a</em>, &nbsp;&nbsp;if <em>a</em> &ge; 0</span>
-                  <span style="display:block;">-<em>a</em>, &nbsp;&nbsp;if <em>a</em> &lt; 0</span>
-              </span>
-          </p>
-      
-          <p>Theorem 1: |<em>a</em> + <em>b</em>| &le; |<em>a</em>| + |<em>b</em>| (Triangle Inequality)</p>
-          <div class="example">
-              Proof:
-              <ul>
-                  <li>i) <em>a</em> &gt; 0, <em>b</em> &gt; 0
-                      <p><em>a</em> + <em>b</em> = <em>a</em> + <em>b</em></p>
-                  </li>
-                  <li>ii) <em>a</em> &lt; 0, <em>b</em> &lt; 0
-                      <p>-(<em>a</em> + <em>b</em>) = (-<em>a</em>) + (-<em>b</em>)</p>
-                  </li>
-                  <li>iii) <em>a</em> &gt; 0, <em>b</em> &lt; 0
-                      <ul>
-                          <li>Assuming (<em>a</em> + <em>b</em>) is positive
-                              <p><em>a</em> + <em>b</em> &lt; <em>a</em> - <em>b</em><br>
-                              <em>b</em> &lt; -<em>b</em></p>
-                          </li>
-                          <li>Assuming (<em>a</em> + <em>b</em>) is negative
-                              <p>-(<em>a</em> + <em>b</em>) = <em>a</em> - <em>b</em><br>
-                              -<em>a</em> - <em>b</em> = <em>a</em> - <em>b</em><br>
-                              -<em>a</em> &lt; <em>a</em></p>
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-          <div class="note">Note: Another proof for the same fact can be used with the definition |<em>a</em>| = √(<em>a</em><sup>2</sup>)</div>
-      
+    <header>
+        <h1>Spivak's Calculus - Chapter 1 Explanation</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Chapter Overview</h2>
+            <p>This chapter introduces fundamental properties of numbers and operations, laying the groundwork for more advanced calculus concepts.</p>
+        </section>
+
+        <section>
+            <h2>Lecture 1: Properties of Numbers</h2>
+            <p>Properties of numbers that all operations must obey:</p>
+            <div class="property">
+                <h3>(P1) Associative Property of Addition:</h3>
+                <p>If <em>a</em>, <em>b</em>, and <em>c</em> are any numbers, then:</p>
+                <p><em>a</em> + (<em>b</em> + <em>c</em>) = (<em>a</em> + <em>b</em>) + <em>c</em></p>
+                <div class="example">
+                    Example: Show that (2 + 3) + 4 = 2 + (3 + 4).
+                </div>
+            </div>
+            
+            <div class="property">
+                <h3>(P2) Commutative Property of Multiplication:</h3>
+                <p>If <em>a</em> and <em>b</em> are any numbers, then:</p>
+                <p><em>a</em> × <em>b</em> = <em>b</em> × <em>a</em></p>
+                <div class="example">
+                    Example: Verify that 2 × 3 = 3 × 2.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Lecture 2: Distributive Property</h2>
+            <div class="property">
+                <h3>(P3) Distributive Property:</h3>
+                <p>If <em>a</em>, <em>b</em>, and <em>c</em> are any numbers, then:</p>
+                <p><em>a</em> × (<em>b</em> + <em>c</em>) = <em>a</em> × <em>b</em> + <em>a</em> × <em>c</em></p>
+                <div class="example">
+                    Example: Use distributive property to simplify 2 × (3 + 4).
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Lecture 3: Real-world Applications</h2>
+            <p>Connecting mathematical properties to real-world examples:</p>
+            <div class="property">
+                <h3>Example: Using Properties in Finance</h3>
+                <p>How the distributive property applies to calculating compound interest.</p>
+                <div class="example">
+                    Example: Calculate compound interest using distributive property.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Definitions and Theorems</h2>
+            <div class="property">
+                <h3>Definition: Absolute Value</h3>
+                <p>|<em>a</em>| = 
+                    <span style="display:inline-block; margin-left: 10px;">
+                        <span style="display:block;"> <em>a</em>, &nbsp;&nbsp;if <em>a</em> &ge; 0</span>
+                        <span style="display:block;">-<em>a</em>, &nbsp;&nbsp;if <em>a</em> &lt; 0</span>
+                    </span>
+                </p>
+                <div class="note">
+                    Note: Another way to define absolute value is |<em>a</em>| = √(<em>a</em><sup>2</sup>).
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
-      
