@@ -1,13 +1,13 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #121212;
+    color: #ffba07;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1e1e1e;
+    color: #ffba07;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -20,18 +20,19 @@ h1 {
 
 main {
     padding: 2rem;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    width: 200%;
+    animation: move 10s linear infinite;
 }
 
 .card {
     position: relative;
-    width: 200px;
+    width: 25%;
     height: 300px;
     text-decoration: none;
     color: white;
@@ -39,6 +40,8 @@ main {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .card img {
@@ -69,4 +72,14 @@ main {
 
 .card:hover .overlay {
     background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
