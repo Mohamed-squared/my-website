@@ -44,7 +44,7 @@ main {
 
 .moving-cards {
     width: 200%;
-    animation: move 20s linear infinite; /* Updated duration */
+    animation: move 25s linear infinite; /* Updated duration */
 }
 
 .stationary-cards {
