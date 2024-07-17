@@ -359,8 +359,12 @@
             searchMenu.classList.toggle('hidden');
             if (!searchMenu.classList.contains('hidden')) {
                 searchMenu.style.transform = 'translateX(0)';
+                searchMenu.style.display = 'block';
             } else {
                 searchMenu.style.transform = 'translateX(-100%)';
+                setTimeout(() => {
+                    searchMenu.style.display = 'none';
+                }, 500); // Wait for the transition to finish
             }
         }
 
