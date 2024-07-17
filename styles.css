@@ -49,6 +49,13 @@ h1 {
     display: none;
 }
 
+#close-icon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
 #search-bar {
     width: 100%;
     padding: 1rem;
@@ -57,6 +64,8 @@ h1 {
     border-radius: 5px;
     margin-bottom: 2rem;
     box-sizing: border-box;
+    background-color: #888;
+    color: #fff;
 }
 
 .search-container {
@@ -72,6 +81,8 @@ h1 {
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #ffba07;
 }
 
 .search-card img {
@@ -84,7 +95,6 @@ h1 {
 
 .search-card span {
     font-size: 1rem;
-    color: #ffba07;
 }
 
 main {
@@ -172,4 +182,8 @@ main {
 @keyframes move {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+.section-title {
+    display: none;
 }
